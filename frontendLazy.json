@@ -1,0 +1,12 @@
+{
+  "description": "Lazy frontend configuration for oriflame frontend repositories.",
+  "extends": [":semanticCommitScopeDisabled", "group:all"],
+  "semanticCommitType": "deps",
+  "semanticCommits": "enabled",
+  "updateLockFiles": true,
+  "azureAutoComplete": true,
+  "commitMessageTopic": "Update {{depName}}",
+  "commitMessage": "{{{commitMessagePrefix}}} {{{commitMessageAction}}} {{{commitMessageTopic}}}{{{commitMessageSuffix}}}",
+  "commitMessageSuffix": ".",
+  "rangeStrategy": "bump"
+}

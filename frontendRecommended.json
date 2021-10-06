@@ -1,0 +1,86 @@
+{
+  "description": "Recommended frontend configuration for oriflame frontend repositories.",
+  "extends": [":semanticCommitScopeDisabled"],
+  "semanticCommitType": "deps",
+  "semanticCommits": "enabled",
+  "updateLockFiles": true,
+  "azureAutoComplete": true,
+  "commitMessageTopic": "Update {{depName}}",
+  "commitMessage": "{{{commitMessagePrefix}}} {{{commitMessageAction}}} {{{commitMessageTopic}}}{{{commitMessageSuffix}}}",
+  "commitMessageSuffix": ".",
+  "rangeStrategy": "bump",
+  "packageRules": [
+    {
+      "matchPackagePrefixes": ["@oriflame/"],
+      "matchDepTypes": ["devDependencies"],
+      "groupName": "oriflame dependencies",
+      "groupSlug": "oriflame-dev-dependencies",
+      "semanticCommitType": "build"
+    },
+    {
+      "matchPackagePrefixes": ["@oriflame/"],
+      "matchDepTypes": ["dependencies"],
+      "groupName": "oriflame dependencies",
+      "groupSlug": "oriflame-dependencies",
+      "semanticCommitType": "deps"
+    },
+    {
+      "matchPackagePrefixes": ["@ori-ui/"],
+      "groupName": "ori-ui dependencies",
+      "groupSlug": "ori-ui-dependencies",
+      "semanticCommitType": "deps"
+    },
+    {
+      "matchPackagePrefixes": ["@ori/"],
+      "matchDepTypes": ["dependencies"],
+      "groupName": "ori dependencies",
+      "groupSlug": "ori-dependencies",
+      "semanticCommitType": "deps"
+    },
+    {
+      "matchPackagePrefixes": ["@ori/"],
+      "matchDepTypes": ["devDependencies"],
+      "groupName": "ori dependencies",
+      "groupSlug": "ori-dev-dependencies",
+      "semanticCommitType": "build"
+    },
+    {
+      "matchPackagePrefixes": ["@ori-events/"],
+      "matchDepTypes": ["devDependencies"],
+      "groupName": "ori dependencies",
+      "groupSlug": "ori-events-dev-dependencies",
+      "semanticCommitType": "build"
+    },
+    {
+      "matchPackagePrefixes": ["@ori-events/"],
+      "matchDepTypes": ["dependencies"],
+      "groupName": "ori dependencies",
+      "groupSlug": "ori-events-dependencies",
+      "semanticCommitType": "deps"
+    },
+    {
+      "matchPackagePatterns": ["*"],
+      "matchDepTypes": ["peerDependencies"],
+      "rangeStrategy": "widen",
+      "semanticCommitType": "deps"
+    },
+    {
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDepTypes": ["devDependencies"],
+      "groupName": "all dev dependencies",
+      "groupSlug": "all-dev-dependencies",
+      "semanticCommitType": "build",
+      "rangeStrategy": "fix"
+    },
+    {
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDepTypes": ["dependencies"],
+      "groupName": "all dependencies",
+      "groupSlug": "all-dependencies",
+      "semanticCommitType": "deps",
+      "rangeStrategy": "fix"
+    }
+  ]
+}
