@@ -59,28 +59,9 @@
       "semanticCommitType": "deps"
     },
     {
-      "matchPackagePatterns": ["*"],
       "matchDepTypes": ["peerDependencies"],
       "rangeStrategy": "widen",
       "semanticCommitType": "deps"
-    },
-    {
-      "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchDepTypes": ["devDependencies"],
-      "groupName": "all dev dependencies",
-      "groupSlug": "all-dev-dependencies",
-      "semanticCommitType": "build",
-      "rangeStrategy": "fix"
-    },
-    {
-      "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchDepTypes": ["dependencies"],
-      "groupName": "all dependencies",
-      "groupSlug": "all-dependencies",
-      "semanticCommitType": "deps",
-      "rangeStrategy": "fix"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "description": "Lazy frontend configuration for oriflame frontend repositories.",
-  "extends": [":semanticCommitScopeDisabled", "group:all"],
+  "extends": [":semanticCommitScopeDisabled"],
   "semanticCommitType": "deps",
   "semanticCommits": "enabled",
   "updateLockFiles": true,
@@ -8,5 +8,29 @@
   "commitMessageTopic": "Update {{depName}}",
   "commitMessage": "{{{commitMessagePrefix}}} {{{commitMessageAction}}} {{{commitMessageTopic}}}{{{commitMessageSuffix}}}",
   "commitMessageSuffix": ".",
-  "rangeStrategy": "bump"
+  "rangeStrategy": "bump",
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["*"],
+      "matchDepTypes": ["devDependencies"],
+      "groupName": "all dev dependencies",
+      "groupSlug": "all-dev-dependencies",
+      "semanticCommitType": "build",
+      "rangeStrategy": "fix"
+    },
+    {
+      "matchPackagePatterns": ["*"],
+      "matchDepTypes": ["dependencies"],
+      "groupName": "all dependencies",
+      "groupSlug": "all-dependencies",
+      "semanticCommitType": "deps",
+      "rangeStrategy": "fix"
+    },
+    {
+      "matchPackagePatterns": ["*"],
+      "matchDepTypes": ["peerDependencies"],
+      "rangeStrategy": "widen",
+      "semanticCommitType": "deps"
+    }
+  ]
 }
