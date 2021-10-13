@@ -1,6 +1,8 @@
 {
   "description": "Recommended frontend configuration for oriflame frontend repositories.",
-  "extends": [":semanticCommitScopeDisabled"],
+  "extends": [
+    ":semanticCommitScopeDisabled"
+  ],
   "semanticCommitType": "deps",
   "semanticCommits": "enabled",
   "updateLockFiles": true,
@@ -11,56 +13,98 @@
   "rangeStrategy": "bump",
   "packageRules": [
     {
-      "matchPackagePrefixes": ["@oriflame/"],
-      "matchDepTypes": ["devDependencies"],
+      "matchPackagePrefixes": [
+        "@oriflame/"
+      ],
+      "matchDepTypes": [
+        "devDependencies"
+      ],
       "groupName": "oriflame dependencies",
       "groupSlug": "oriflame-dev-dependencies",
       "semanticCommitType": "build"
     },
     {
-      "matchPackagePrefixes": ["@oriflame/"],
-      "matchDepTypes": ["dependencies"],
+      "matchPackagePrefixes": [
+        "@oriflame/"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
       "groupName": "oriflame dependencies",
       "groupSlug": "oriflame-dependencies",
       "semanticCommitType": "deps"
     },
     {
-      "matchPackagePrefixes": ["@ori-ui/"],
+      "matchPackagePrefixes": [
+        "@ori-ui/"
+      ],
       "groupName": "ori-ui dependencies",
       "groupSlug": "ori-ui-dependencies",
       "semanticCommitType": "deps"
     },
     {
-      "matchPackagePrefixes": ["@ori/"],
-      "matchDepTypes": ["dependencies"],
+      "matchPackagePrefixes": [
+        "@ori/"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
       "groupName": "ori dependencies",
       "groupSlug": "ori-dependencies",
       "semanticCommitType": "deps"
     },
     {
-      "matchPackagePrefixes": ["@ori/"],
-      "matchDepTypes": ["devDependencies"],
+      "matchPackagePrefixes": [
+        "@ori/"
+      ],
+      "matchDepTypes": [
+        "devDependencies"
+      ],
       "groupName": "ori dependencies",
       "groupSlug": "ori-dev-dependencies",
       "semanticCommitType": "build"
     },
     {
-      "matchPackagePrefixes": ["@ori-events/"],
-      "matchDepTypes": ["devDependencies"],
+      "matchPackagePrefixes": [
+        "@ori-events/"
+      ],
+      "matchDepTypes": [
+        "devDependencies"
+      ],
       "groupName": "ori dependencies",
       "groupSlug": "ori-events-dev-dependencies",
       "semanticCommitType": "build"
     },
     {
-      "matchPackagePrefixes": ["@ori-events/"],
-      "matchDepTypes": ["dependencies"],
+      "matchPackagePrefixes": [
+        "@ori-events/"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
       "groupName": "ori dependencies",
       "groupSlug": "ori-events-dependencies",
       "semanticCommitType": "deps"
     },
     {
-      "matchDepTypes": ["peerDependencies"],
+      "matchDepTypes": [
+        "peerDependencies"
+      ],
       "rangeStrategy": "widen",
+      "semanticCommitType": "deps"
+    },
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "rangeStrategy": "bump",
+      "semanticCommitType": "build"
+    },
+    {
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "rangeStrategy": "bump",
       "semanticCommitType": "deps"
     }
   ]
