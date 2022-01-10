@@ -7,11 +7,23 @@
   "semanticCommits": "enabled",
   "updateLockFiles": true,
   "azureAutoComplete": true,
-  "commitMessageTopic": "Update {{depName}}",
+  "commitMessageTopic": "dependency {{depName}}",
   "commitMessage": "{{{commitMessagePrefix}}} {{{commitMessageAction}}} {{{commitMessageTopic}}}{{{commitMessageSuffix}}}",
   "commitMessageSuffix": ".",
   "rangeStrategy": "bump",
+  "enabledManagers": [
+    "dockerfile",
+    "npm"
+  ],
   "packageRules": [
+    {
+      "matchDatasources": [
+        "docker"
+      ],
+      "labels": [
+        "docker-update"
+      ]
+    },
     {
       "matchPackagePrefixes": [
         "@oriflame/"
@@ -88,17 +100,24 @@
     },
     {
       "matchDepTypes": [
-        "peerDependencies"
+        "peerDependencies",
+        "resolutions",
+        "engines"
       ],
       "rangeStrategy": "widen",
-      "semanticCommitType": "deps"
+      "semanticCommitType": "build"
     },
     {
+      "matchPackagePatterns": [
+        "*"
+      ],
       "matchDepTypes": [
         "devDependencies"
       ],
-      "rangeStrategy": "bump",
-      "semanticCommitType": "build"
+      "groupName": "all dev dependencies",
+      "groupSlug": "all-dev-dependencies",
+      "semanticCommitType": "build",
+      "rangeStrategy": "fix"
     },
     {
       "matchDepTypes": [

@@ -1,36 +1,64 @@
 {
   "description": "Lazy frontend configuration for oriflame frontend repositories.",
-  "extends": [":semanticCommitScopeDisabled"],
+  "extends": [
+    ":semanticCommitScopeDisabled"
+  ],
   "semanticCommitType": "deps",
   "semanticCommits": "enabled",
   "updateLockFiles": true,
   "azureAutoComplete": true,
-  "commitMessageTopic": "Update {{depName}}",
+  "commitMessageTopic": "dependency {{depName}}",
   "commitMessage": "{{{commitMessagePrefix}}} {{{commitMessageAction}}} {{{commitMessageTopic}}}{{{commitMessageSuffix}}}",
   "commitMessageSuffix": ".",
   "rangeStrategy": "bump",
+  "enabledManagers": [
+    "dockerfile",
+    "npm"
+  ],
   "packageRules": [
     {
-      "matchPackagePatterns": ["*"],
-      "matchDepTypes": ["devDependencies"],
+      "matchDatasources": [
+        "docker"
+      ],
+      "labels": [
+        "docker-update"
+      ]
+    },
+    {
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchDepTypes": [
+        "devDependencies"
+      ],
       "groupName": "all dev dependencies",
       "groupSlug": "all-dev-dependencies",
       "semanticCommitType": "build",
       "rangeStrategy": "fix"
     },
     {
-      "matchPackagePatterns": ["*"],
-      "matchDepTypes": ["dependencies"],
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
       "groupName": "all dependencies",
       "groupSlug": "all-dependencies",
       "semanticCommitType": "deps",
       "rangeStrategy": "fix"
     },
     {
-      "matchPackagePatterns": ["*"],
-      "matchDepTypes": ["peerDependencies"],
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchDepTypes": [
+        "peerDependencies",
+        "resolutions",
+        "engines"
+      ],
       "rangeStrategy": "widen",
-      "semanticCommitType": "deps"
+      "semanticCommitType": "build"
     }
   ]
 }
