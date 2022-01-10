@@ -9,6 +9,7 @@
   "azureAutoComplete": true,
   "commitMessageTopic": "dependency {{depName}}",
   "commitMessage": "{{{commitMessagePrefix}}} {{{commitMessageAction}}} {{{commitMessageTopic}}}{{{commitMessageSuffix}}}",
+  "commitMessageAction": "Update",
   "commitMessageSuffix": ".",
   "rangeStrategy": "bump",
   "enabledManagers": [
