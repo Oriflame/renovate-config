@@ -26,17 +26,11 @@
       ]
     },
     {
-      "matchPackagePrefixes": [
-        "@oriflame/"
+      "matchUpdateTypes": [
+        "patch",
+        "minor",
+        "major"
       ],
-      "matchDepTypes": [
-        "devDependencies"
-      ],
-      "groupName": "oriflame dependencies",
-      "groupSlug": "oriflame-dev-dependencies",
-      "semanticCommitType": "build"
-    },
-    {
       "matchPackagePrefixes": [
         "@oriflame/"
       ],
@@ -48,6 +42,11 @@
       "semanticCommitType": "deps"
     },
     {
+      "matchUpdateTypes": [
+        "patch",
+        "minor",
+        "major"
+      ],
       "matchPackagePrefixes": [
         "@ori-ui/"
       ],
@@ -56,6 +55,11 @@
       "semanticCommitType": "deps"
     },
     {
+      "matchUpdateTypes": [
+        "patch",
+        "minor",
+        "major"
+      ],
       "matchPackagePrefixes": [
         "@ori/"
       ],
@@ -67,28 +71,11 @@
       "semanticCommitType": "deps"
     },
     {
-      "matchPackagePrefixes": [
-        "@ori/"
+      "matchUpdateTypes": [
+        "patch",
+        "minor",
+        "major"
       ],
-      "matchDepTypes": [
-        "devDependencies"
-      ],
-      "groupName": "ori dependencies",
-      "groupSlug": "ori-dev-dependencies",
-      "semanticCommitType": "build"
-    },
-    {
-      "matchPackagePrefixes": [
-        "@ori-events/"
-      ],
-      "matchDepTypes": [
-        "devDependencies"
-      ],
-      "groupName": "ori dependencies",
-      "groupSlug": "ori-events-dev-dependencies",
-      "semanticCommitType": "build"
-    },
-    {
       "matchPackagePrefixes": [
         "@ori-events/"
       ],
@@ -115,12 +102,22 @@
       "matchDepTypes": [
         "devDependencies"
       ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor",
+        "major"
+      ],
       "groupName": "all dev dependencies",
       "groupSlug": "all-dev-dependencies",
       "semanticCommitType": "build",
       "rangeStrategy": "fix"
     },
     {
+      "matchUpdateTypes": [
+        "patch",
+        "minor",
+        "major"
+      ],
       "matchDepTypes": [
         "dependencies"
       ],

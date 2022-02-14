@@ -26,8 +26,27 @@
       ]
     },
     {
+      "matchDepTypes": [
+        "peerDependencies",
+        "resolutions",
+        "engines"
+      ],
+      "rangeStrategy": "widen",
+      "semanticCommitType": "build"
+    },
+    {
+      "excludePackagePatterns": [
+        "peerDependencies",
+        "resolutions",
+        "engines"
+      ],
       "matchPackagePatterns": [
         "*"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor",
+        "major"
       ],
       "groupName": "all dependencies",
       "groupSlug": "all",
