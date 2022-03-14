@@ -1,9 +1,5 @@
 {
   "description": "Lazy frontend configuration for oriflame frontend repositories.",
-  "extends": [
-    ":semanticCommitScopeDisabled"
-  ],
-  "semanticCommitType": "deps",
   "semanticCommits": "enabled",
   "updateLockFiles": true,
   "azureAutoComplete": true,
@@ -42,11 +38,6 @@
       ],
       "matchPackagePatterns": [
         "*"
-      ],
-      "matchUpdateTypes": [
-        "patch",
-        "minor",
-        "major"
       ],
       "groupName": "all dependencies",
       "groupSlug": "all",

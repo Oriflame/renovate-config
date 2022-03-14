@@ -8,7 +8,10 @@
     ":prConcurrentLimit20",
     "group:monorepos",
     "group:recommended",
-    "workarounds:all"
+    "workarounds:all",
+    ":semanticCommitScopeDisabled"
   ],
+  "separateMajorMinor": false,
+  "semanticCommitType": "build",
   "platform": "azure"
 }
