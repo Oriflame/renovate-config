@@ -1,0 +1,69 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Frontend configuration for Oriflame frontend repositories.",
+  "updateLockFiles": true,
+  "azureAutoComplete": true,
+  "commitMessageTopic": "dependency {{depName}}",
+  "commitMessage": "{{{commitMessagePrefix}}} {{{commitMessageAction}}} {{{commitMessageTopic}}}{{{commitMessageSuffix}}}",
+  "commitMessageAction": "Update",
+  "commitMessageSuffix": ".",
+  "rangeStrategy": "bump",
+  "enabledManagers": [
+    "dockerfile",
+    "npm"
+  ],
+  "packageRules": [
+    {
+      "matchPackagePrefixes": [
+        "@oriflame/",
+        "@ori-ui/",
+        "@ori/",
+        "@ori-appshell/",
+        "@ori-events/"
+      ],
+      "rangeStrategy": "bump",
+      "groupName": "Oriflame Dependencies (major only)",
+      "matchUpdateTypes": ["major"],
+      "groupSlug": "oriflame-dependencies-major"
+    },
+    {
+      "matchPackagePrefixes": [
+        "@oriflame/",
+        "@ori-ui/",
+        "@ori/",
+        "@ori-appshell/",
+        "@ori-events/"
+      ],
+      "rangeStrategy": "bump",
+      "groupName": "Oriflame Dependencies (non-major)",
+      "groupSlug": "oriflame-dependencies-minor-patch",
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "excludePackagePrefixes": [
+        "@oriflame/",
+        "@ori-ui/",
+        "@ori/",
+        "@ori-appshell/",
+        "@ori-events/"
+      ],
+      "rangeStrategy": "bump",
+      "groupName": "Oriflame Dependencies (major only)",
+      "groupSlug": "other-dependencies-major",
+      "matchUpdateTypes": ["major"]
+    },
+    {
+      "excludePackagePrefixes": [
+        "@oriflame/",
+        "@ori-ui/",
+        "@ori/",
+        "@ori-appshell/",
+        "@ori-events/"
+      ],
+      "rangeStrategy": "bump",
+      "groupName": "Oriflame Dependencies (non-major)",
+      "groupSlug": "other-dependencies-minor-patch",
+      "matchUpdateTypes": ["minor", "patch"]
+    }
+  ]
+}
