@@ -24,6 +24,13 @@
       "rangeStrategy": "bump",
       "groupName": "Oriflame Dependencies (major only)",
       "matchUpdateTypes": ["major"],
+      "depTypeList": [
+        "devDependencies",
+        "dependencies",
+        "peerDependencies",
+        "resolutions",
+        "overrides"
+      ],
       "groupSlug": "oriflame-dependencies-major"
     },
     {
@@ -37,6 +44,13 @@
       "rangeStrategy": "bump",
       "groupName": "Oriflame Dependencies (non-major)",
       "groupSlug": "oriflame-dependencies-minor-patch",
+      "depTypeList": [
+        "devDependencies",
+        "dependencies",
+        "peerDependencies",
+        "resolutions",
+        "overrides"
+      ],
       "matchUpdateTypes": ["minor", "patch"]
     },
     {
@@ -50,6 +64,13 @@
       "rangeStrategy": "bump",
       "groupName": "Oriflame Dependencies (major only)",
       "groupSlug": "other-dependencies-major",
+      "depTypeList": [
+        "devDependencies",
+        "dependencies",
+        "peerDependencies",
+        "resolutions",
+        "overrides"
+      ],
       "matchUpdateTypes": ["major"]
     },
     {
@@ -63,6 +84,13 @@
       "rangeStrategy": "bump",
       "groupName": "Oriflame Dependencies (non-major)",
       "groupSlug": "other-dependencies-minor-patch",
+      "depTypeList": [
+        "devDependencies",
+        "dependencies",
+        "peerDependencies",
+        "resolutions",
+        "overrides"
+      ],
       "matchUpdateTypes": ["minor", "patch"]
     }
   ]
