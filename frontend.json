@@ -14,6 +14,10 @@
   ],
   "packageRules": [
     {
+      "groupName": "Oriflame Dependencies (major only)",
+      "groupSlug": "oriflame-dependencies-major",
+      "matchUpdateTypes": ["major"],
+      "matchFiles": ["package.json"],
       "matchPackagePrefixes": [
         "@oriflame/",
         "@ori-ui/",
@@ -21,59 +25,39 @@
         "@ori-appshell/",
         "@ori-events/"
       ],
-      "rangeStrategy": "bump",
-      "groupName": "Oriflame Dependencies (major only)",
-      "matchUpdateTypes": ["major"],
       "depTypeList": [
         "devDependencies",
         "dependencies",
         "peerDependencies",
         "resolutions",
         "overrides"
-      ],
-      "groupSlug": "oriflame-dependencies-major"
+      ]
     },
     {
-      "matchPackagePrefixes": [
-        "@oriflame/",
-        "@ori-ui/",
-        "@ori/",
-        "@ori-appshell/",
-        "@ori-events/"
-      ],
-      "rangeStrategy": "bump",
       "groupName": "Oriflame Dependencies (non-major)",
       "groupSlug": "oriflame-dependencies-minor-patch",
-      "depTypeList": [
-        "devDependencies",
-        "dependencies",
-        "peerDependencies",
-        "resolutions",
-        "overrides"
-      ],
-      "matchUpdateTypes": ["minor", "patch"]
-    },
-    {
-      "excludePackagePrefixes": [
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchFiles": ["package.json"],
+      "matchPackagePrefixes": [
         "@oriflame/",
         "@ori-ui/",
         "@ori/",
         "@ori-appshell/",
         "@ori-events/"
       ],
-      "rangeStrategy": "bump",
-      "groupName": "Oriflame Dependencies (major only)",
+      "depTypeList": [
+        "devDependencies",
+        "dependencies",
+        "peerDependencies",
+        "resolutions",
+        "overrides"
+      ]
+    },
+    {
+      "groupName": "Non-Oriflame Dependencies (major only)",
       "groupSlug": "other-dependencies-major",
-      "depTypeList": [
-        "devDependencies",
-        "dependencies",
-        "peerDependencies",
-        "resolutions",
-        "overrides"
-      ],
-      "matchUpdateTypes": ["major"]
-    },
-    {
+      "matchUpdateTypes": ["major"],
+      "matchFiles": ["package.json"],
       "excludePackagePrefixes": [
         "@oriflame/",
         "@ori-ui/",
@@ -81,17 +65,33 @@
         "@ori-appshell/",
         "@ori-events/"
       ],
-      "rangeStrategy": "bump",
-      "groupName": "Oriflame Dependencies (non-major)",
-      "groupSlug": "other-dependencies-minor-patch",
       "depTypeList": [
         "devDependencies",
         "dependencies",
         "peerDependencies",
         "resolutions",
         "overrides"
+      ]
+    },
+    {
+      "groupName": "Non-Oriflame Dependencies (non-major)",
+      "groupSlug": "other-dependencies-minor-patch",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchFiles": ["package.json"],
+      "excludePackagePrefixes": [
+        "@oriflame/",
+        "@ori-ui/",
+        "@ori/",
+        "@ori-appshell/",
+        "@ori-events/"
       ],
-      "matchUpdateTypes": ["minor", "patch"]
+      "depTypeList": [
+        "devDependencies",
+        "dependencies",
+        "peerDependencies",
+        "resolutions",
+        "overrides"
+      ]
     }
   ]
 }
