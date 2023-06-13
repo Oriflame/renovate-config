@@ -1,7 +1,17 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Frontend configuration for Oriflame frontend repositories.",
+  "commitMessageTopic": "dependency {{depName}}",
+  "commitMessage": "{{{commitMessagePrefix}}} {{{commitMessageAction}}} {{{commitMessageTopic}}}{{{commitMessageSuffix}}}",
+  "commitMessageAction": "Update",
+  "commitMessageSuffix": ".",
   "packageRules": [
+    {
+      "matchDepTypes": [
+        "packageManager"
+      ],
+      "enabled": false
+    },
     {
       "groupName": "Non-Oriflame Dependencies (major only)",
       "groupSlug": "other-dependencies-major",
@@ -13,7 +23,7 @@
         "@ori-appshell/",
         "@ori-events/"
       ],
-      "depTypeList": [
+      "matchDepTypes": [
         "devDependencies",
         "dependencies",
         "peerDependencies",
@@ -33,7 +43,7 @@
         "@ori-appshell/",
         "@ori-events/"
       ],
-      "depTypeList": [
+      "matchDepTypes": [
         "devDependencies",
         "dependencies",
         "peerDependencies",
@@ -52,7 +62,7 @@
         "@ori-appshell/",
         "@ori-events/"
       ],
-      "depTypeList": [
+      "matchDepTypes": [
         "devDependencies",
         "dependencies",
         "peerDependencies",
@@ -72,7 +82,7 @@
         "@ori-appshell/",
         "@ori-events/"
       ],
-      "depTypeList": [
+      "matchDepTypes": [
         "devDependencies",
         "dependencies",
         "peerDependencies",
