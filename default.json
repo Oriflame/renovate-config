@@ -7,9 +7,11 @@
   ],
   "updateLockFiles": true,
   "azureAutoComplete": true,
-  "commitMessage": "{{{commitMessagePrefix}}} {{{commitMessageAction}}}{{{commitMessageSuffix}}}",
+  "commitMessageTopic": "dependency {{depName}}",
+  "commitMessage": "{{{commitMessagePrefix}}} {{{commitMessageAction}}} {{{commitMessageTopic}}}{{{commitMessageSuffix}}}",
   "commitMessageAction": "Update",
   "commitMessageSuffix": ".",
+  "commitMessageExtra": "",
   "rangeStrategy": "bump",
   "enabledManagers": [
     "npm"
