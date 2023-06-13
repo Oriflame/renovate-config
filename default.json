@@ -10,7 +10,7 @@
   "commitMessageTopic": "dependency {{depName}}",
   "commitMessage": "{{{commitMessagePrefix}}} {{{commitMessageAction}}} {{{commitMessageTopic}}}{{{commitMessageSuffix}}}",
   "commitMessageAction": "Update",
-  "commitMessageSuffix": ".",
+  "commitMessageSuffix": "",
   "commitMessageExtra": "",
   "rangeStrategy": "bump",
   "enabledManagers": [
