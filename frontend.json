@@ -1,8 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Frontend configuration for Oriflame frontend repositories.",
-  "commitMessageTopic": "dependency {{depName}}",
-  "commitMessage": "{{{commitMessagePrefix}}} {{{commitMessageAction}}} {{{commitMessageTopic}}}{{{commitMessageSuffix}}}",
+  "commitMessage": "{{{commitMessagePrefix}}} {{{commitMessageAction}}}{{{commitMessageSuffix}}}",
   "commitMessageAction": "Update",
   "commitMessageSuffix": ".",
   "packageRules": [
