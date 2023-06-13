@@ -9,10 +9,52 @@
   "commitMessageSuffix": ".",
   "rangeStrategy": "bump",
   "enabledManagers": [
-    "dockerfile",
     "npm"
   ],
   "packageRules": [
+    {
+      "groupName": "Oriflame Dependencies (non-major)",
+      "groupSlug": "oriflame-dependencies-minor-patch",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchFiles": ["package.json"],
+      "automerge": true,
+      "matchPackagePrefixes": [
+        "@oriflame/",
+        "@ori-ui/",
+        "@ori/",
+        "@ori-appshell/",
+        "@ori-events/"
+      ],
+      "depTypeList": [
+        "devDependencies",
+        "dependencies",
+        "peerDependencies",
+        "resolutions",
+        "overrides"
+      ]
+    },
+    {
+      "groupName": "Non-Oriflame Dependencies (non-major)",
+      "groupSlug": "other-dependencies-minor-patch",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchFiles": ["package.json"],
+      "automerge": true,
+      "matchPackagePatterns": [".*"],
+      "excludePackagePrefixes": [
+        "@oriflame/",
+        "@ori-ui/",
+        "@ori/",
+        "@ori-appshell/",
+        "@ori-events/"
+      ],
+      "depTypeList": [
+        "devDependencies",
+        "dependencies",
+        "peerDependencies",
+        "resolutions",
+        "overrides"
+      ]
+    },
     {
       "groupName": "Oriflame Dependencies (major only)",
       "groupSlug": "oriflame-dependencies-major",
@@ -34,50 +76,11 @@
       ]
     },
     {
-      "groupName": "Oriflame Dependencies (non-major)",
-      "groupSlug": "oriflame-dependencies-minor-patch",
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchFiles": ["package.json"],
-      "matchPackagePrefixes": [
-        "@oriflame/",
-        "@ori-ui/",
-        "@ori/",
-        "@ori-appshell/",
-        "@ori-events/"
-      ],
-      "depTypeList": [
-        "devDependencies",
-        "dependencies",
-        "peerDependencies",
-        "resolutions",
-        "overrides"
-      ]
-    },
-    {
       "groupName": "Non-Oriflame Dependencies (major only)",
       "groupSlug": "other-dependencies-major",
       "matchUpdateTypes": ["major"],
       "matchFiles": ["package.json"],
-      "excludePackagePrefixes": [
-        "@oriflame/",
-        "@ori-ui/",
-        "@ori/",
-        "@ori-appshell/",
-        "@ori-events/"
-      ],
-      "depTypeList": [
-        "devDependencies",
-        "dependencies",
-        "peerDependencies",
-        "resolutions",
-        "overrides"
-      ]
-    },
-    {
-      "groupName": "Non-Oriflame Dependencies (non-major)",
-      "groupSlug": "other-dependencies-minor-patch",
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchFiles": ["package.json"],
+      "matchPackagePatterns": [".*"],
       "excludePackagePrefixes": [
         "@oriflame/",
         "@ori-ui/",
