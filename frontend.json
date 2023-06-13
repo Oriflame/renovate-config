@@ -13,18 +13,12 @@
   ],
   "packageRules": [
     {
-      "groupName": "Oriflame Dependencies (non-major)",
-      "groupSlug": "oriflame-dependencies-minor-patch",
-      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "Non-Oriflame Dependencies (major only)",
+      "groupSlug": "other-dependencies-major",
+      "matchUpdateTypes": ["major"],
       "matchFiles": ["package.json"],
-      "automerge": true,
-      "matchPackagePrefixes": [
-        "@oriflame/",
-        "@ori-ui/",
-        "@ori/",
-        "@ori-appshell/",
-        "@ori-events/"
-      ],
+      "matchPackagePatterns": ["*"],
+      "matchPackagePrefixes": ["*"],
       "depTypeList": [
         "devDependencies",
         "dependencies",
@@ -39,15 +33,8 @@
       "matchUpdateTypes": ["minor", "patch"],
       "matchFiles": ["package.json"],
       "automerge": true,
-      "matchPackagePatterns": [".*"],
-      "matchPackagePrefixes": [".*"],
-      "excludePackagePrefixes": [
-        "@oriflame/",
-        "@ori-ui/",
-        "@ori/",
-        "@ori-appshell/",
-        "@ori-events/"
-      ],
+      "matchPackagePatterns": ["*"],
+      "matchPackagePrefixes": ["*"],
       "depTypeList": [
         "devDependencies",
         "dependencies",
@@ -77,13 +64,12 @@
       ]
     },
     {
-      "groupName": "Non-Oriflame Dependencies (major only)",
-      "groupSlug": "other-dependencies-major",
-      "matchUpdateTypes": ["major"],
+      "groupName": "Oriflame Dependencies (non-major)",
+      "groupSlug": "oriflame-dependencies-minor-patch",
+      "matchUpdateTypes": ["minor", "patch"],
       "matchFiles": ["package.json"],
-      "matchPackagePatterns": [".*"],
-      "matchPackagePrefixes": [".*"],
-      "excludePackagePrefixes": [
+      "automerge": true,
+      "matchPackagePrefixes": [
         "@oriflame/",
         "@ori-ui/",
         "@ori/",
