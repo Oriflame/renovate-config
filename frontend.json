@@ -39,7 +39,7 @@
       "matchUpdateTypes": ["minor", "patch"],
       "matchFiles": ["package.json"],
       "automerge": true,
-      "matchPackagePatterns": ["*"],
+      "matchPackagePatterns": [".*"],
       "excludePackagePrefixes": [
         "@oriflame/",
         "@ori-ui/",
@@ -80,7 +80,7 @@
       "groupSlug": "other-dependencies-major",
       "matchUpdateTypes": ["major"],
       "matchFiles": ["package.json"],
-      "matchPackagePatterns": ["*"],
+      "matchPackagePatterns": [".*"],
       "excludePackagePrefixes": [
         "@oriflame/",
         "@ori-ui/",
