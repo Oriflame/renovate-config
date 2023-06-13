@@ -1,24 +1,18 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Frontend configuration for Oriflame frontend repositories.",
-  "updateLockFiles": true,
-  "azureAutoComplete": true,
-  "commitMessageTopic": "dependency {{depName}}",
-  "commitMessage": "{{{commitMessagePrefix}}} {{{commitMessageAction}}} {{{commitMessageTopic}}}{{{commitMessageSuffix}}}",
-  "commitMessageAction": "Update",
-  "commitMessageSuffix": ".",
-  "rangeStrategy": "bump",
-  "enabledManagers": [
-    "npm"
-  ],
   "packageRules": [
     {
       "groupName": "Non-Oriflame Dependencies (major only)",
       "groupSlug": "other-dependencies-major",
       "matchUpdateTypes": ["major"],
-      "matchFiles": ["package.json"],
-      "matchPackagePatterns": ["*"],
-      "matchPackagePrefixes": ["*"],
+      "excludePackagePrefixes": [
+        "@oriflame/",
+        "@ori-ui/",
+        "@ori/",
+        "@ori-appshell/",
+        "@ori-events/"
+      ],
       "depTypeList": [
         "devDependencies",
         "dependencies",
@@ -31,10 +25,14 @@
       "groupName": "Non-Oriflame Dependencies (non-major)",
       "groupSlug": "other-dependencies-minor-patch",
       "matchUpdateTypes": ["minor", "patch"],
-      "matchFiles": ["package.json"],
       "automerge": true,
-      "matchPackagePatterns": ["*"],
-      "matchPackagePrefixes": ["*"],
+      "excludePackagePrefixes": [
+        "@oriflame/",
+        "@ori-ui/",
+        "@ori/",
+        "@ori-appshell/",
+        "@ori-events/"
+      ],
       "depTypeList": [
         "devDependencies",
         "dependencies",
@@ -47,7 +45,6 @@
       "groupName": "Oriflame Dependencies (major only)",
       "groupSlug": "oriflame-dependencies-major",
       "matchUpdateTypes": ["major"],
-      "matchFiles": ["package.json"],
       "matchPackagePrefixes": [
         "@oriflame/",
         "@ori-ui/",
@@ -67,7 +64,6 @@
       "groupName": "Oriflame Dependencies (non-major)",
       "groupSlug": "oriflame-dependencies-minor-patch",
       "matchUpdateTypes": ["minor", "patch"],
-      "matchFiles": ["package.json"],
       "automerge": true,
       "matchPackagePrefixes": [
         "@oriflame/",

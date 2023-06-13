@@ -8,6 +8,15 @@
   "commitMessageAction": "Update",
   "commitMessageSuffix": ".",
   "rangeStrategy": "bump",
+  "extends": [
+    ":semanticPrefixFixDepsChoreOthers",
+    ":autodetectPinVersions",
+    ":prHourlyLimit2",
+    ":prConcurrentLimit20",
+    "group:monorepos",
+    "group:recommended",
+    "workarounds:all"
+  ],
   "enabledManagers": [
     "dockerfile",
     "npm"
