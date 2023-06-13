@@ -40,6 +40,7 @@
       "matchFiles": ["package.json"],
       "automerge": true,
       "matchPackagePatterns": [".*"],
+      "matchPackagePrefixes": [".*"],
       "excludePackagePrefixes": [
         "@oriflame/",
         "@ori-ui/",
@@ -81,6 +82,7 @@
       "matchUpdateTypes": ["major"],
       "matchFiles": ["package.json"],
       "matchPackagePatterns": [".*"],
+      "matchPackagePrefixes": [".*"],
       "excludePackagePrefixes": [
         "@oriflame/",
         "@ori-ui/",
