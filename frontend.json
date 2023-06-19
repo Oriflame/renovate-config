@@ -10,7 +10,7 @@
       "enabled": false
     },
     {
-      "groupName": "non-Oriflame dependencies",
+      "groupName": "other dependencies",
       "groupSlug": "other-dependencies-major",
       "matchUpdateTypes": ["major"],
       "excludePackagePrefixes": [
@@ -29,7 +29,7 @@
       ]
     },
     {
-      "groupName": "non-Oriflame dependencies (non-major)",
+      "groupName": "other dependencies (non-major)",
       "groupSlug": "other-dependencies-minor-patch",
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true,
@@ -49,8 +49,8 @@
       ]
     },
     {
-      "groupName": "dependencies",
-      "groupSlug": "dependencies-major",
+      "groupName": "Oriflame dependencies",
+      "groupSlug": "oriflame-dependencies-major",
       "matchUpdateTypes": ["major"],
       "matchPackagePrefixes": [
         "@oriflame/",
@@ -68,8 +68,8 @@
       ]
     },
     {
-      "groupName": "dependencies (non-major)",
-      "groupSlug": "dependencies-minor-patch",
+      "groupName": "Oriflame dependencies (non-major)",
+      "groupSlug": "oriflame-dependencies-minor-patch",
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true,
       "matchPackagePrefixes": [
