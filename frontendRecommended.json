@@ -12,6 +12,15 @@
     "dockerfile",
     "npm"
   ],
+  "extends": [
+    ":semanticPrefixFixDepsChoreOthers",
+    ":autodetectPinVersions",
+    ":prHourlyLimit2",
+    ":prConcurrentLimit20",
+    "group:monorepos",
+    "group:recommended",
+    "workarounds:all"
+  ],
   "packageRules": [
     {
       "matchDatasources": [

@@ -1,17 +1,19 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Default configuration for oriflame",
   "extends": [
-    ":semanticPrefixFixDepsChoreOthers",
     ":ignoreModulesAndTests",
-    ":autodetectPinVersions",
-    ":prHourlyLimit2",
-    ":prConcurrentLimit20",
-    "group:monorepos",
-    "group:recommended",
-    "workarounds:all",
     ":semanticCommitScopeDisabled"
   ],
-  "separateMajorMinor": false,
-  "semanticCommitType": "build",
-  "platform": "azure"
+  "updateLockFiles": true,
+  "azureAutoComplete": true,
+  "commitMessageTopic": "dependency {{depName}}",
+  "commitMessage": "{{{commitMessagePrefix}}} {{{commitMessageAction}}} {{{commitMessageTopic}}}{{{commitMessageSuffix}}}",
+  "commitMessageAction": "Update",
+  "commitMessageSuffix": "",
+  "commitMessageExtra": "",
+  "rangeStrategy": "bump",
+  "enabledManagers": [
+    "npm"
+  ]
 }

@@ -1,0 +1,91 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Frontend configuration for Oriflame frontend repositories.",
+  "packageRules": [
+    {
+      "matchDepTypes": [
+        "packageManager",
+        "engines"
+      ],
+      "enabled": false
+    },
+    {
+      "groupName": "other dependencies",
+      "groupSlug": "other-dependencies-major",
+      "matchUpdateTypes": ["major"],
+      "excludePackagePrefixes": [
+        "@oriflame/",
+        "@ori-ui/",
+        "@ori/",
+        "@ori-appshell/",
+        "@ori-events/"
+      ],
+      "matchDepTypes": [
+        "devDependencies",
+        "dependencies",
+        "peerDependencies",
+        "resolutions",
+        "overrides"
+      ]
+    },
+    {
+      "groupName": "other dependencies (non-major)",
+      "groupSlug": "other-dependencies-minor-patch",
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true,
+      "excludePackagePrefixes": [
+        "@oriflame/",
+        "@ori-ui/",
+        "@ori/",
+        "@ori-appshell/",
+        "@ori-events/"
+      ],
+      "matchDepTypes": [
+        "devDependencies",
+        "dependencies",
+        "peerDependencies",
+        "resolutions",
+        "overrides"
+      ]
+    },
+    {
+      "groupName": "Oriflame dependencies",
+      "groupSlug": "oriflame-dependencies-major",
+      "matchUpdateTypes": ["major"],
+      "matchPackagePrefixes": [
+        "@oriflame/",
+        "@ori-ui/",
+        "@ori/",
+        "@ori-appshell/",
+        "@ori-events/"
+      ],
+      "matchDepTypes": [
+        "devDependencies",
+        "dependencies",
+        "peerDependencies",
+        "resolutions",
+        "overrides"
+      ]
+    },
+    {
+      "groupName": "Oriflame dependencies (non-major)",
+      "groupSlug": "oriflame-dependencies-minor-patch",
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true,
+      "matchPackagePrefixes": [
+        "@oriflame/",
+        "@ori-ui/",
+        "@ori/",
+        "@ori-appshell/",
+        "@ori-events/"
+      ],
+      "matchDepTypes": [
+        "devDependencies",
+        "dependencies",
+        "peerDependencies",
+        "resolutions",
+        "overrides"
+      ]
+    }
+  ]
+}
