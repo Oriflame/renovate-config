@@ -12,7 +12,9 @@
     {
       "groupName": "other dependencies",
       "groupSlug": "other-dependencies-major",
-      "matchUpdateTypes": ["major"],
+      "matchUpdateTypes": [
+        "major"
+      ],
       "excludePackagePrefixes": [
         "@oriflame/",
         "@ori-ui/",
@@ -24,14 +26,16 @@
         "devDependencies",
         "dependencies",
         "peerDependencies",
-        "resolutions",
-        "overrides"
+        "resolutions"
       ]
     },
     {
       "groupName": "other dependencies (non-major)",
       "groupSlug": "other-dependencies-minor-patch",
-      "matchUpdateTypes": ["minor", "patch"],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
       "automerge": true,
       "excludePackagePrefixes": [
         "@oriflame/",
@@ -44,14 +48,15 @@
         "devDependencies",
         "dependencies",
         "peerDependencies",
-        "resolutions",
-        "overrides"
+        "resolutions"
       ]
     },
     {
       "groupName": "Oriflame dependencies",
       "groupSlug": "oriflame-dependencies-major",
-      "matchUpdateTypes": ["major"],
+      "matchUpdateTypes": [
+        "major"
+      ],
       "matchPackagePrefixes": [
         "@oriflame/",
         "@ori-ui/",
@@ -63,14 +68,16 @@
         "devDependencies",
         "dependencies",
         "peerDependencies",
-        "resolutions",
-        "overrides"
+        "resolutions"
       ]
     },
     {
       "groupName": "Oriflame dependencies (non-major)",
       "groupSlug": "oriflame-dependencies-minor-patch",
-      "matchUpdateTypes": ["minor", "patch"],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
       "automerge": true,
       "matchPackagePrefixes": [
         "@oriflame/",
@@ -83,9 +90,14 @@
         "devDependencies",
         "dependencies",
         "peerDependencies",
-        "resolutions",
-        "overrides"
+        "resolutions"
       ]
+    },
+    {
+      "matchDepTypes": [
+        "overrides"
+      ],
+      "enabled": false
     }
   ]
 }
